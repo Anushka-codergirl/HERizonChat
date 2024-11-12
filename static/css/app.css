@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+.header-text{
+    font-family: "Satisfy", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #2f2aaf;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+}
+
+  

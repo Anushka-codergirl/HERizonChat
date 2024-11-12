@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERizonChat</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/app.css')}}" />
+    <link rel="stylesheet"
+        href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">HERizonChat <i class="bi bi-chat"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                                HERizonChat <i class="bi bi-chat"></i>
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#faq">FAQs</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="pt-5 mt-4">
+            <h2 class="header-text text-center">HERizonChat <i class="bi bi-chat"></i></h2>
+            <p>HERizonChat is your interactive chatbot assistant, providing quick answers and valuable insights on women's equality, empowerment, and relevant global topics like the <strong>Sustainable Development Goals (SDGs)</strong>. Whether you're seeking information on gender equality, laws affecting women, or global initiatives for women’s empowerment, HERizonChat is here to help. Ask anything about women’s rights, or SDG reports, or get inspired by the stories of women breaking barriers worldwide.</p>
+        </div>
+        <div class="row pb-0 pe-lg-0 align-items-center rounded-3 border shadow-lg" id="about">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h2 class="header-text display-6 fw-bold lh-1 text-body-emphasis">Empowering Conversations,<br/> One Query at a Time!
+                </h2>
+                <p class="lead"><em>She speaks of change, of skies so wide, <br/>
+                    With courage, she stands, nothing to hide.<br/>
+                    Empowered and free, she’s here to stay,<br/>
+                    Shaping the world in her own way.</em></p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a class="btn btn-primary me-md-2 fw-bold" href="https://developers.google.com/womentechmakers">Join the Movement</a>
+                    <a class="btn btn-outline-secondary" href="https://www.un.org/sustainabledevelopment/gender-equality/">Let’s Talk Equality</a>
+                </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img class="rounded-lg-3" src="{{url_for('static',filename='images/shebuildsai.png' )}}" alt="She Builds AI"
+                    width="700">
+            </div>
+        </div>
+
+        <div class="accordion py-3" id="faq">
+            <h2 class="header-text">FAQs</h2>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        #1 How do I start a conversation with HERizonChat?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                        To start a conversation, click on the <strong>chat icon</strong> at the bottom right of the
+                        page. Once the chat window opens, ask something, and click the send icon to get your answer.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        #2 What kind of queries can I ask HERizonChat?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                        <strong>HERizonChat</strong> is designed to answer any questions related to women's equality,
+                        empowerment, and SDG reports. You can ask about gender equality, rights, laws, statistics, and
+                        global initiatives supporting women. It also provides insights into how different countries are
+                        working towards achieving the SDGs that focus on women's welfare.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        #3 Is HERizonChat available in different languages?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                        Currently, HERizonChat is available in <strong>English</strong>. Stay tuned for updates!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <df-messenger project-id="vectorsearch-434411" agent-id="d98f4b59-00fd-4eb0-9ef2-8f00fb475d91" language-code="en" max-query-length="-1">
+            <df-messenger-chat-bubble chat-title="HERizonChat"></df-messenger-chat-bubble>
+        </df-messenger>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <p>
+                    <script>document.write(new Date().getFullYear());</script>
+                    &copy; All rights reserved | Made with
+                    <i class="bi bi-heart text-danger" aria-hidden="true"></i> by
+                    <a href="https://github.com/Anushka-codergirl/" title="_blank">Anushka Raj</a>
+                </p>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="https://x.com/AnushCodergirl"><i class="bi bi-twitter"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/anush.codergirl/"><i class="bi bi-instagram"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/anushka-raj"><i class="bi bi-linkedin"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
